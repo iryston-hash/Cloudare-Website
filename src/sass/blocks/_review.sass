@@ -2,6 +2,7 @@
 .review
     background: url(../images/revbg.jpg) center (top/cover) no-repeat
     padding: 38px 0 82px
+    text-align: center
     &__title
         font-weight: bold
         color: #fff
@@ -11,10 +12,12 @@
         max-width: 384px
         margin: 0 auto 48px
     &__items
-        max-width: 940px
+        max-width: 50vh
+        gap: 20px
         display: flex
-        justify-content: space-between
+        justify-content: center
         margin: 0 auto
+        flex-wrap: wrap
     &__item
         width: 300px
         background: #ffffff33
@@ -24,9 +27,10 @@
         &-head
             margin-bottom: 13px
             display: flex
+            flex-direction: column
+            align-items: center
             & img
                 border-radius: 50%
-                margin-right: 20px
                 width: 50px
                 height: 50px
         &-name
