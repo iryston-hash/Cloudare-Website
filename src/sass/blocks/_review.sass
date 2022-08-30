@@ -1,0 +1,50 @@
+
+.review
+    background: url(../images/revbg.jpg) center (top/cover) no-repeat
+    padding: 38px 0 82px
+    &__title
+        font-weight: bold
+        color: #fff
+        font-size: 35px
+        text-align: center
+        line-height: 45px
+        max-width: 384px
+        margin: 0 auto 48px
+    &__items
+        max-width: 940px
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+    &__item
+        width: 300px
+        background: #ffffff33
+        border-radius: 5px
+        padding: 35px 20px
+        color: #fff
+        &-head
+            margin-bottom: 13px
+            display: flex
+            & img
+                border-radius: 50%
+                margin-right: 20px
+                width: 50px
+                height: 50px
+        &-name
+            font-weight: 600
+        &-position
+            opacity: .5
+
+        &-description
+            position: relative
+            text-align: center
+            padding-top: 39px
+            max-width: 260px
+            &::before
+                content: "“"
+                position: absolute
+                font-weight: bold
+                font-size: 40px
+                line-height: 55px
+                top: 0
+                left: 0
+                right: 0
