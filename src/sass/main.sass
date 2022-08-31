@@ -1,12 +1,14 @@
 $maincolor: #ffffff
 $seccolor: #202020
 $tricolor: #FFCA00
+$tricolor-modal: #f9ed0029
 @import 'blocks/_header'
 @import 'blocks/_special'
 @import 'blocks/_advantages'
 @import 'blocks/_review'
 @import 'blocks/_footer'
 @import 'blocks/_media'
+@import 'blocks/_page-up'
 
 html
    scroll-behavior: smooth
@@ -33,6 +35,21 @@ a
       color: $tricolor
       opacity: 1
 
+.btn--close-cookie
+   font-weight: 300
+   text-transform: uppercase
+   color: white
+   padding: 10px 30px
+   background: black
+   opacity: .8
+   border-radius: 20px
+   font-size: 16px
+   transition: .4s all
+   cursor: pointer
+   &:hover
+      opacity: 1
+      background: $tricolor
+      color: black
 .container
    max-width: 1200px
    margin-left: auto

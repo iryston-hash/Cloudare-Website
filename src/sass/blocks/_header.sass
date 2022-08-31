@@ -82,101 +82,89 @@
         width: 15px
         opacity: .8
 
-// starfall
-// .night
-//     position: absolute
-//     width: 100%
-//     height: 150%
-//     transform: rotateZ(55deg)
-// .star
-//     position: absolute
-//     left: 5%
-//     top: 50%
-//     height: 5px
-//     background: linear-gradient(-90deg, $tricolor, rgba(0, 0, 255, 0))
-//     border-radius: 999px
-//     filter: drop-shadow(0 0 6px #fdff69)
-//     animation: tail 10s ease-in-out infinite, falling 10s ease-in-out infinite
+.cookie-message
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    max-width: 100vw
+    background-color: rgba(18, 15, 15, 0.703)
+    color: rgb(0, 0, 0)
+    font-size: 1.5rem
+    font-weight: 600
+    padding: 5px
 
-// @keyframes tail
-//     0%
-//         width: 0
+.modal
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 60rem
+    background: $tricolor-modal
+    padding: 5rem 6rem
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3)
+    z-index: 1000
+    transition: all 0.5s
+    border-radius: 30px
 
-//     30%
-//         width: 100px
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    backdrop-filter: blur(4px)
+    z-index: 100
+    transition: all 0.5s
 
-//     100%
-//         width: 0
+.modal__header
+    font-size: 3.25rem
+    margin-bottom: 4.5rem
+    line-height: 1.5
+    text-align: center
 
-// @keyframes falling
-//     0%
-//         transform: translateX(0)
-//     100%
-//         transform: translateX(100px)
+.modal__form
+    margin: 0 3rem
+    display: grid
+    grid-template-columns: 1fr 2fr
+    align-items: center
+    gap: 2.5rem
+    & label
+        font-size: 1.7rem
+        font-weight: 500
+    & input
+        font-size: 1.7rem
+        padding: 1rem 1.5rem
+        border: 1px solid #ddd
+        border-radius: 0.5rem
+    & button
+        grid-column: 1 / span 2
+        justify-self: center
+        margin-top: 1rem
+.btn__form-register
+    font-weight: 600
+    text-transform: uppercase
+    color: white
+    padding: 14px 39px
+    background: black
+    border-radius: 20px
+    transition: .4s all
+    cursor: pointer
+    &:hover
+        background: $tricolor
+        color: black
 
-// .star::before, .star::after
-//     content: ''
-//     position: absolute
-//     top: calc(50% - 2px)
-//     right: 0
-//     height: 4px
-//     background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #fffb00, rgba(0, 0, 255, 0))
-//     border-radius: 100%
-//     transform: translateX(50%) rotateZ(45deg)
-//     animation: shining 5s ease-in-out infinite
+.btn__close-modal
+    font-family: inherit
+    color: inherit
+    position: absolute
+    top: 0.5rem
+    right: 2rem
+    font-size: 4rem
+    cursor: pointer
+    border: none
+    background: none
 
-// @keyframes shining
-//     0%
-//         width: 0
-
-//     50%
-//         width: 40px
-
-//     100%
-//         width: 0
-
-// .star::after
-//     transform: translateX(50%) rotateZ(-45deg)
-
-// .star:nth-child(1)
-//     top: calc(10% - 100px)
-//     left: calc(20% - 250px)
-//     animation-delay: 1s
-
-// .star:nth-child(1)::before, .star:nth-child(1)::after
-//     animation-delay: 1s
-
-// .star:nth-child(2)
-//     top: calc(20% - 50px)
-//     left: calc(20% - 200px)
-//     animation-delay: 1.2s
-
-// .star:nth-child(2)::before, .star:nth-child(2)::after
-//     animation-delay: 1.2s
-
-// .star:nth-child(3)
-//     top: calc(20% - 0px)
-//     left: calc(40% - 150px)
-//     animation-delay: 3s
-
-// .star:nth-child(3)::before, .star:nth-child(3)::after
-//     animation-delay: 1.4s
-
-// .star:nth-child(4)
-//     top: calc(60% - -50px)
-//     left: calc(30% - 150px)
-//     animation-delay: 1s
-
-// .star:nth-child(4)::before, .star:nth-child(4)::after
-//     animation-delay: 1.6s
-// .star:nth-child(5)
-//     top: calc(80% - -100px)
-//     left: calc(20% - 250px)
-//     animation-delay: 1.8s
-
-// .star:nth-child(5)::before, .star:nth-child(5)::after
-//     animation-delay: 1.8s
-// .star:nth-child(6)::before, .star:nth-child(6)::after
-//     animation-delay: 2s
-//     top: calc(10% - -100px)
-//     left: calc(10% - 250px)
+.hidden
+    visibility: hidden
+    opacity: 0
